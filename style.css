@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background: rgba(0, 0, 0, 0.9);
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+p {
+  line-height: 1.5;
+}
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 0 14px;
+}
+header {
+  color: white;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.mobile-menu ul li a {
+  font: bold;
+  text-transform: uppercase;
+}
+li {
+  list-style: none;
+}
+.nav_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+.nav_wrapper .logo {
+  font-weight: bold;
+}
+.nav_wrapper i {
+  font-size: 25px;
+  outline: none;
+
+  cursor: pointer;
+}
+
+/* hero */
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.hero h1 span .name {
+  border-bottom: 1px soild cyan;
+  padding-bottom: 2px;
+}
+
+.hero p {
+  margin-bottom: 1.2rem;
+  max-width: 450px;
+}
+.hero .contact {
+  display: inline-block;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  font-weight: bold;
+  border-bottom: 1px solid cyan;
+}
+
+/* skills section */
+.skills-section {
+  padding: 2rem 0 3.5rem;
+}
+.skills-container {
+  border-top: 1px solid whitesmoke;
+  padding-top: 3rem;
+  color: white;
+  text-align: center;
+}
+.skills-container h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+/* projects */
+.projects-section {
+  padding: 2rem 0;
+  height: 100%;
+}
+.projects-section .contact {
+  display: none;
+}
+.project-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 2rem;
+}
+.project-top h2 {
+  color: white;
+  font-size: 2.5rem;
+}
+.projects-section .project {
+  object-fit: cover;
+  height: 100%;
+  color: white;
+}
+.projects-section .project p {
+  margin-top: 1rem;
+}
+.projects-section .projects-bottom {
+  display: grid;
+  grid-template-columns: 1;
+  gap: 1rem;
+}
+
+/* contact section */
+.contact-section {
+  background-color: #333;
+  color: white;
+}
+footer {
+  background-color: #333;
+  color: white;
+}
+
+.footer-container .logo {
+  font-weight: bold;
+}
+.footer-container .wrapper {
+  border-top: 1px solid wheat;
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-container .wrapper div a {
+  font-size: 20px;
+  cursor: pointer;
+}
+@media only screen and (min-width: 500px) {
+  .container {
+    padding: 0 2rem;
+  }
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero {
+    color: white;
+    height: calc(100vh - 80px);
+    display: flex;
+    padding-top: 100px;
+  }
+  .mobile-menu {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    transition: 0.3s all;
+    z-index: 1000;
+  }
+  .mobile-menu ul {
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .showmenu {
+    right: 0;
+    transition-timing-function: ease-in-out;
+  }
+  .close-btn {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero {
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .menu-btn {
+    display: none;
+  }
+  .mobile-menu ul li {
+    display: inline-block;
+    margin-left: 5px;
+  }
+  .mobile-menu ul li a {
+    padding: 12px;
+    border-radius: 5px;
+  }
+  .mobile-menu ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.623);
+    transition: 0.3s color;
+  }
+  .project-top .contact {
+    display: inline-block;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    font-weight: bold;
+    border-bottom: 1px solid cyan;
+  }
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer-container .wrapper {
+    border-top: 1px solid wheat;
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-container .wrapper div a {
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+  .close-btn {
+    display: none;
+  }
+  .projects-section .projects-bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
