@@ -81,6 +81,12 @@ li {
 .skills-section {
   padding: 2rem 0 3.5rem;
 }
+.skills-section h1 {
+  text-align: center;
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
 .skills-container {
   border-top: 1px solid whitesmoke;
   padding-top: 3rem;
@@ -124,6 +130,84 @@ li {
   gap: 1rem;
 }
 
+/* image slider */
+.imageslider-container {
+  max-width: 400px;
+  position: relative;
+  padding: 2rem 0 3rem 0;
+  margin: auto;
+}
+.imageslider-container .text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.imageslider-container h1 {
+  text-align: center;
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+.mySlides {
+  display: none;
+}
+.mySlides img {
+  height: 450px;
+  object-fit: cover;
+  object-position: center;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 100%;
+  user-select: none;
+}
+.next {
+  right: 0;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 0.34s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* contact section */
 .contact-section {
   background-color: #333;
